@@ -1,0 +1,26 @@
+import apiClient from "./api-client"
+
+export const getTrips = async () => {
+  const response = await apiClient.get("/trips")
+  return response.data
+}
+
+export const getTrip = async (id) => {
+  const response = await apiClient.get(`/trips/${id}`)
+  return response.data
+}
+
+export const createTrip = async (tripData) => {
+  const response = await apiClient.post("/trips", tripData)
+  return response.data
+}
+
+export const updateTrip = async ({ id, data }) => {
+  const response = await apiClient.patch(`/trips/${id}`, data)
+  return response.data
+}
+
+export const cancelTrip = async (id) => {
+  const response = await apiClient.delete(`/trips/${id}`)
+  return response.data
+}
