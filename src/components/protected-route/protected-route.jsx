@@ -1,13 +1,9 @@
-import { Navigate, Outlet } from "react-router-dom"
+import { Navigate, Outlet } from "react-router-dom";
 
-import { useAuth } from "../../hooks/use-auth"
+import { useAuth } from "../../hooks/use-auth";
 
 function ProtectedRoute() {
-  const {
-    user,
-    isLoadingUser,
-    isAuthenticated,
-  } = useAuth()
+  const { user, isLoadingUser, isAuthenticated } = useAuth();
 
   if (isLoadingUser) {
     return (
@@ -23,19 +19,14 @@ function ProtectedRoute() {
           </p>
         </div>
       </div>
-    )
+    );
   }
 
   if (!isAuthenticated || !user) {
-    return (
-      <Navigate
-        to="/login"
-        replace
-      />
-    )
+    return <Navigate to="/login" replace />;
   }
 
-  return <Outlet />
+  return <Outlet />;
 }
 
-export default ProtectedRoute
+export default ProtectedRoute;

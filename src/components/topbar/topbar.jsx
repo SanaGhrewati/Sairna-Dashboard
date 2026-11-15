@@ -1,5 +1,4 @@
 import {
-  FiBell,
   FiMenu,
   FiUser,
 } from "react-icons/fi"
