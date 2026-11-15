@@ -6,6 +6,7 @@ import {
   FiBriefcase,
   FiMapPin,
   FiBookOpen,
+  FiUsers,
   FiX,
 } from "react-icons/fi";
 
@@ -21,9 +22,9 @@ function Sidebar({ isOpen, onClose, user, onLogout }) {
       )}
 
       <aside
-        className={`fixed right-0 top-0 z-50 flex h-screen w-72 flex-col border-l border-slate-200 bg-white transition-transform duration-300 lg:static lg:translate-x-0 ${
+        className={`fixed right-0 top-0 z-50 flex h-screen w-72 flex-col border-l border-slate-200 bg-white transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        } lg:translate-x-0`}
       >
         <div className="flex h-20 items-center justify-between border-b border-slate-100 px-6">
           <div>
@@ -127,6 +128,21 @@ function Sidebar({ isOpen, onClose, user, onLogout }) {
           >
             <FiBookOpen size={19} />
             <span>الحجوزات</span>
+          </NavLink>
+
+          <NavLink
+            to="/users"
+            onClick={onClose}
+            className={({ isActive }) =>
+              `flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold transition ${
+                isActive
+                  ? "bg-[#0aa99b] text-white shadow-sm"
+                  : "text-slate-600 hover:bg-[#e6f8f3] hover:text-[#078e87]"
+              }`
+            }
+          >
+            <FiUsers size={19} />
+            <span>المستخدمون</span>
           </NavLink>
         </nav>
 

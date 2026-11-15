@@ -28,16 +28,8 @@ function Topbar({ onMenuClick, user }) {
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
-          <button
-            type="button"
-            className="relative rounded-xl border border-slate-200 p-2.5 text-slate-500 transition hover:bg-slate-50"
-          >
-            <FiBell size={19} />
-
-            <span className="absolute right-1.5 top-1.5 h-2 w-2 rounded-full bg-[#0aa99b]" />
-          </button>
-
+        <div className="flex items-center gap-2">
+          
           <div className="hidden h-8 w-px bg-slate-200 sm:block" />
 
           <div className="flex items-center gap-3">

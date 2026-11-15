@@ -12,6 +12,7 @@ import CompaniesPage from "./pages/companies/companies-page";
 import CitiesPage from "./pages/cities/cities-page";
 import BookingsPage from "./pages/bookings/bookings-page";
 import BookingDetailsPage from "./pages/bookings/booking-details-page";
+import UsersPage from "./pages/users/users-page";
 
 function App() {
   return (
@@ -38,6 +39,8 @@ function App() {
             <Route path="/bookings" element={<BookingsPage />} />
 
             <Route path="/bookings/:id" element={<BookingDetailsPage />} />
+
+            <Route path="/users" element={<UsersPage />} />
           </Route>
         </Route>
       </Routes>
